@@ -15,6 +15,6 @@ end
 
 describe('Parcel#cost_to_ship') do
   it('returns the price to ship a given Parcel based on the distance and desired speed of shipping') do
-    expect(Parcel.new(2,2,10,10).cost_to_ship(5,100, true)).to(eq(17))
+    expect(Parcel.new(2,2,10,10).cost_to_ship(5,100)).to(eq(17))
   end
 end

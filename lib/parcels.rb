@@ -13,6 +13,6 @@ class Parcel
   end
 
   define_method(:cost_to_ship) do |speed, distance|
-    (11 - speed) + (distance*0.1) + (@details["weight"] * 0.1)
+    11 - speed.to_f + distance.to_f * 0.1 + @details["weight"] * 0.1
   end
 end
