@@ -7,4 +7,12 @@ class Parcel
       "weight" => weight.to_f
     }
   end
+
+  define_method(:volume) do
+    @details["length"] * @details["width"] * @details["height"]
+  end
+
+  define_method(:cost_to_ship) do |speed, distance|
+    (11 - speed) + (distance*0.1) + (@details["weight"] * 0.1)
+  end
 end
